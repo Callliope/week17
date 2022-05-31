@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-5 m-3">
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">ЧАТ</label>
+                    <label for="exampleFormControlTextarea1">ПОСЛЕДНЕЕ СООБЩЕНИЕ :</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                         readonly>Напишите что-то!</textarea>
                 </div>
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-5">
                 <div class="form-group m-3">
-                    <label for="commentinput">Введите комментарий</label>
+                    <label for="commentinput">Добавьте комментарий</label>
                     <input class="form-control form-control-lg" type="text" placeholder="текст" id="commentinput">
                 </div>
             </div>
@@ -42,14 +42,14 @@
         function addcomment(sender) {
             let txt = document.getElementById("commentinput").value;
             let txt2 = txt.toLowerCase();
-            if ((txt2.includes("viagra") & (txt2.includes("xxx")))) {
+            if (txt2.includes("viagra")) {
                 let txt3 = txt2.replace("viagra", "***");
-                txt3 = txt2.replace("XXX", "***");
+                document.getElementById("exampleFormControlTextarea1").value = txt3;
+            } else if (txt2.includes("xxx")) {
+                let txt3 = txt2.replace("xxx", "***");
                 document.getElementById("exampleFormControlTextarea1").value = txt3;
             } else {
-
-            } else if {
-                document.getElementById("exampleFormControlTextarea1").value = txt;
+                document.getElementById("exampleFormControlTextarea1").value = txt2;
             }
 
         }
