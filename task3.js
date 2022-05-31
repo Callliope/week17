@@ -25,4 +25,3 @@ function formatDate(date){
 
 
 }
-formatDate(date);
